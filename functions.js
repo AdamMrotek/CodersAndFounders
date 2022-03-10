@@ -1,3 +1,4 @@
+//Functions Prompt
 // Hello User
 /////////////
 const greeter = (name) => {
@@ -68,3 +69,19 @@ const addPositive = (arrOfNumb) => {
   }, 0);
 };
 console.log(addPositive([1, 3, 100, 0, -5000])); //104
+
+//DOM
+const hasAtLeastTwoNumbers = (string) => {
+  return string.match(/([0-9])/g)?.length >= 2 ? true : false;
+};
+hasAtLeastTwoNumbers("asd");
+const hasFiveChar = (string) => {
+  return string.length >= 5 ? true : false;
+};
+console.log(hasFiveChar("dupaa"));
+const hasOneSmallAndCapitalLetter = (string) => {
+  let hasSmallLetter = /([a-z])/.test(string);
+  let hasCapitalLetter = /([A-Z])/.test(string);
+  return hasCapitalLetter && hasSmallLetter;
+};
+console.log(hasOneSmallAndCapitalLetter("aaaa"));
